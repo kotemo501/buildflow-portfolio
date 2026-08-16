@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="対応範囲、受付工程、修理例、手入れメモ、相談入力を6ページで実装した静的Webサイトの自主制作ケース。">
+  <title>修理受付の静的Webサイト | kotemo501</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#case-content">ケース本文へ移動</a>
+  <header class="site-header">
+    <a class="identity" href="../index.html"><strong>kotemo501</strong><span>PowerPoint・業務資料・静的Web</span></a>
+    <nav aria-label="ケースナビゲーション"><a href="../index.html#works" aria-current="page">制作例</a><a href="../index.html#services">依頼できること</a><a href="../index.html#process">進め方</a></nav>
+  </header>
+
+  <main class="case-main" id="case-content">
+    <a class="case-back" href="../index.html#works">制作例一覧へ戻る</a>
+    <section class="case-intro">
+      <div>
+        <p class="case-kicker">自主制作 04 / HTML・CSS・JavaScript / 6ページ</p>
+        <h1>ページごとの役割を、実装まで通す</h1>
+        <p class="case-lede">家具と生活道具の修理受付を題材に、案内、対象範囲、受付工程、架空例、手入れメモ、相談入力を6ページへ分けました。相談入力は表示用の静的モックで、送信や保存は行いません。</p>
+      </div>
+      <dl class="case-meta">
+        <div><dt>想定入力</dt><dd>自主制作の要件、文章、画面構成</dd></div>
+        <div><dt>担当</dt><dd>情報設計、コピー、UI、HTML・CSS・JS</dd></div>
+        <div><dt>成果物</dt><dd>6 HTML、共通CSS・JS、favicon</dd></div>
+        <div><dt>確認範囲</dt><dd>レスポンシブ、ナビ、キーボード操作</dd></div>
+      </dl>
+    </section>
+
+    <figure class="case-hero">
+      <img src="../assets/case-images/static-repair-site/01-home.png" alt="家具と生活道具の修理相談を題材にした静的サイトのホーム画面">
+      <figcaption>ホーム。相談前に用意するものと、確認項目を最初の画面で分けています。</figcaption>
+    </figure>
+
+    <section class="case-section" aria-labelledby="web-decisions">
+      <div><p class="plain-label">画面設計</p><h2 id="web-decisions">6ページを、同じ見た目の複製にしませんでした。</h2></div>
+      <div class="case-section-copy">
+        <p>サイト内で必要な読み方は一つではありません。対象を知るページ、工程を追うページ、例を比べるページ、入力するページで、情報の並び方を変えました。共通するのはナビゲーション、文字、余白、罫線の規則です。</p>
+        <ol class="decision-list">
+          <li><span>01</span><div><strong>ホームは相談前の準備を優先</strong><p>写真、状態、サイズを先に示し、詳しい案内へつなげました。</p></div></li>
+          <li><span>02</span><div><strong>対応範囲は対象外も同じ重さで表示</strong><p>電気、ガス、水道、安全器具など、専門窓口へ渡す範囲を分けました。</p></div></li>
+          <li><span>03</span><div><strong>工程は表形式で追える構成</strong><p>受付から返却までを、作業、確認内容、状態の列で並べました。</p></div></li>
+          <li><span>04</span><div><strong>入力画面は静的境界を明記</strong><p>ラベルと補助文を実装し、送信ボタン、保存処理、外部通信は追加していません。</p></div></li>
+          <li><span>05</span><div><strong>モバイル操作を別途実装</strong><p>メニュー開閉、Escapeでの閉鎖、フォーカス復帰、44px以上の操作領域を確認しました。</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="evidence-section" aria-labelledby="web-evidence">
+      <div class="evidence-heading"><h2 id="web-evidence">案内、工程、入力</h2><p>3画面は同じ1440×1000のブラウザ条件で撮影しました。サイト本体では6ページすべてを移動できます。</p></div>
+      <div class="evidence-grid">
+        <figure class="evidence-wide"><img src="../assets/case-images/static-repair-site/01-home.png" alt="修理相談サイトのホーム画面"><figcaption>案内。何を用意すれば相談内容を整理できるかを最初に表示。</figcaption></figure>
+        <figure><img src="../assets/case-images/static-repair-site/02-flow.png" alt="写真での相談から返却まで五段階を並べた工程ページ"><figcaption>工程。受付、確認、受入、作業、返却を一つの表で追える構成。</figcaption></figure>
+        <figure><img src="../assets/case-images/static-repair-site/03-input.png" alt="道具の種類、名前、大きさ、状態を入力する静的UI"><figcaption>入力UI。分かる範囲だけ入力でき、送信・保存されないことを明記。</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="case-section" aria-labelledby="web-boundary">
+      <div><p class="plain-label">実装と境界</p><h2 id="web-boundary">このケースで確認できること</h2></div>
+      <div class="case-section-copy"><div class="case-scope">
+        <section><h3>確認できる</h3><ul><li>6ページの情報設計と共通ナビ</li><li>HTML・CSS・JavaScriptの静的実装</li><li>モバイルメニューとキーボード操作</li><li>ラベル、補助文、入力UI</li><li>外部フォント・解析なしの構成</li></ul></section>
+        <section><h3>この作品では示していない</h3><ul><li>フォーム送信、保存、データベース</li><li>CMS、決済、会員機能、バックエンド</li><li>SEO運用、アクセス解析、保守契約</li><li>本番サービスのセキュリティ保証</li></ul></section>
+      </div></div>
+    </section>
+
+    <section class="case-downloads" aria-labelledby="web-files"><h2 id="web-files">実装を見る</h2><div><a href="../assets/repair-site/index.html">6ページのサイトを開く</a><a href="../assets/repair-site-source.zip" download>HTML・CSS・JavaScript一式をダウンロード</a></div></section>
+    <nav class="case-next" aria-label="他の制作例"><a href="field-record-proposal.html">前のケース：工事写真の確認フロー</a><a href="../index.html#works">4件の制作例一覧</a></nav>
+  </main>
+
+  <footer class="site-footer"><p>kotemo501 / 自主制作ポートフォリオ</p><p>実在の事業者・顧客情報・受注実績ではありません。</p></footer>
+</body>
+</html>

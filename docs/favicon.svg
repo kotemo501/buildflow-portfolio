@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="kotemo501">
+  <rect width="64" height="64" rx="6" fill="#1c211f"/>
+  <path d="M18 14v36M18 32 44 14M18 32l28 18" fill="none" stroke="#f3f2ee" stroke-width="6" stroke-linecap="square" stroke-linejoin="miter"/>
+  <circle cx="48" cy="14" r="4" fill="#1f5c70"/>
+</svg>
